@@ -50,6 +50,7 @@ dig -x 108.157.11.8
 ```
 
 - **Anàlisi requerida:** Quina informació sobre els registres `PTR` s'obté i a quin nom de domini correspon aquesta IP?
+**El registre DNS PTR (Pointer Record) permet fer una consulta DNS inversa, és a dir, obtenir el nom de domini associat a una adreça IP.**
 
 ### Part B. Comprovació de resolució amb `nslookup` (mode interactiu amb Windows o Linux)
 
@@ -69,7 +70,15 @@ Exploreu l'ús de l'eina `nslookup` en mode interactiu executant la comanda `nsl
 
 ![](/AA1-Diganosi-DNS/img/Captura%20de%20pantalla%202026-11-05%20184011.png)
 
-- **Anàlisi requerida:** Quina resposta dona la consola? Per què indica textualment que la resposta és **no autoritativa** (*Non-authoritative answer*)?
+- **Anàlisi requerida:** Quina resposta dona la consola? 
+**La consola mostra que, en fer una consulta DNS amb nslookup sobre el domini tecnocampus.cat, s'obtenen quatre adreces IPv4:**
+- 18.172.213.8
+- 18.172.213.97
+- 18.172.213.10
+- 18.172.213.22  
+
+- Per què indica textualment que la resposta és **no autoritativa** (*Non-authoritative answer*)?
+**La resposta apareix com a Non-authoritative answer perquè el servidor DNS consultat no és l'autoritat directa del domini tecnocampus.cat.**
 
 #### Comanda 6: consultes autoritatives directes
 
@@ -98,3 +107,18 @@ ping aitor-VirtualBox.local
 ```
 
 - **Anàlisi requerida:** Descriviu com funciona el protocol **mDNS** (*Multicast DNS*), quin port utilitza (UDP 5353) i quin avantatge aporta en entorns on no es disposa d'un servidor DNS configurat.
+
+
+## Fonts 
+### Guio
+
+Notebook:
+https://notebook.google.com/notebook/2567c814-9cf4-4dc1-96b0-5137d8899908
+
+### Comandes
+Chatgpt:
+https://chatgpt.com/share/6aecf8f1-d1d4-83ed-9414-28995bc390cc
+
+### Mapa conceptual
+Chatgpt:
+https://chatgpt.com/share/6aecf9a3-fc6c-83eb-bc0b-3378d6c424e5
